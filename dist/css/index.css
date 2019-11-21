@@ -1,0 +1,15 @@
+body,
+html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: serif;
+}
+#map {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}

@@ -1,0 +1,35 @@
+{
+    "name": "harp-shadows",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:dbabbs/harp-shadows",
+    "author": "Dylan Babbs",
+    "license": "MIT",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "start": "webpack-dev-server --config webpack.config.js",
+        "prettier": "prettier -l \"src/*.ts\" \"src/*.tsx\" \"src/*.json\" \"src/*.js\"",
+        "prettier:fix": "prettier --write \"src/*.ts\" \"src/*.tsx\" \"src/*.json\" \"src/*.js\""
+    },
+    "dependencies": {
+        "@here/harp-debug-datasource": "^0.11.0",
+        "@here/harp-geojson-datasource": "^0.11.0",
+        "@here/harp-map-controls": "^0.11.0",
+        "@here/harp-mapview": "^0.11.0",
+        "@here/harp-omv-datasource": "^0.11.0",
+        "@here/harp-webtile-datasource": "^0.11.0",
+        "@pnext/three-loader": "^0.1.5",
+        "@turf/turf": "^5.1.6",
+        "prettier": "^1.18.2",
+        "three": "^0.110.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.9.0"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^5.0.4",
+        "html-webpack-plugin": "^3.2.0",
+        "tsconfig-paths-webpack-plugin": "^3.2.0"
+    }
+}
