@@ -100146,8 +100146,7 @@ const options = {
 let move = false;
 setTimeout(() => {
    move = true;
-}, 8000)
-
+}, 8000);
 
 function enableShadows(map) {
    map.renderer.shadowMap.enabled = true;
@@ -100180,13 +100179,13 @@ function enableShadows(map) {
                }
                if (move) {
                   if (y < 1) {
-                     y += 0.003
+                     y += 0.003;
                   } else if (y >= 1 && x > 0) {
-                     x -= 0.003
+                     x -= 0.003;
                   }
                }
                if (y !== 1 && x !== 0) {
-                  obj.position.set(x, y, 1)
+                  obj.position.set(x, y, 1);
                }
             }
          };
@@ -100198,8 +100197,6 @@ function enableShadows(map) {
    };
    updateLightCamera();
 }
-
-
 
 async function shadowTheme(sourceTheme) {
    const direction = { x: 1, y: 1, z: 1 };
@@ -100235,6 +100232,15 @@ async function shadowTheme(sourceTheme) {
          }
       }
    }
+   theme.styles.tilezen.push({
+      description: "builtup area",
+      when: "$layer ^= 'landuse' && (($geometryType ^= 'polygon') && kind in ['urban_area'])",
+      technique: "fill",
+      attr: {
+         color: "#D4CDC0"
+      },
+      renderOrder: 0
+   });
    theme.styles.tilezen.forEach(styleDeclaration => {
       patchFillStyle(styleDeclaration);
    });
@@ -100247,7 +100253,8 @@ function patchFillStyle(styleDeclaration) {
       if (style.technique === "fill") {
          style.technique = "standard";
          style.attr.roughness = 8.0;
-         style.attr.opacity = 1;      }
+         style.attr.opacity = 1;
+      }
       // if (style.description === 'builtup area') {
       //    style.technique = "standard";
       //    style.attr.color = '#EDF8FB'
