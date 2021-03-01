@@ -22,7 +22,7 @@
         "@pnext/three-loader": "^0.1.5",
         "@turf/turf": "^5.1.6",
         "prettier": "^1.18.2",
-        "three": "^0.110.0",
+        "three": "^0.125.0",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.9.0"
